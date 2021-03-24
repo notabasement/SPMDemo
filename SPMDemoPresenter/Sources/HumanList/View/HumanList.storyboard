@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vp2-ZK-K5A">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Human List View Controller-->
+        <scene sceneID="WCf-3t-npm">
+            <objects>
+                <viewController id="Vp2-ZK-K5A" customClass="HumanListViewController" customModule="SPMDemoPresenter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFO-0M-GQj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB6-Tg-ypw" customClass="SPMUIBoldLabel">
+                                <rect key="frame" x="186.5" y="144" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ef-yp-tVP" customClass="SPMUIThumbnailView">
+                                <rect key="frame" x="87" y="204.5" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZBq-ez-J70"/>
+                                    <constraint firstAttribute="width" constant="240" id="m8g-Ef-jRj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dij-W2-ieh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RB6-Tg-ypw" firstAttribute="centerX" secondItem="FFO-0M-GQj" secondAttribute="centerX" id="8JK-iA-atr"/>
+                            <constraint firstItem="4ef-yp-tVP" firstAttribute="centerX" secondItem="FFO-0M-GQj" secondAttribute="centerX" id="JlD-9E-dGk"/>
+                            <constraint firstItem="4ef-yp-tVP" firstAttribute="top" secondItem="RB6-Tg-ypw" secondAttribute="bottom" constant="40" id="YCl-5V-tvL"/>
+                            <constraint firstItem="RB6-Tg-ypw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FFO-0M-GQj" secondAttribute="leadingMargin" id="aNA-9u-UMd"/>
+                            <constraint firstItem="RB6-Tg-ypw" firstAttribute="top" secondItem="dij-W2-ieh" secondAttribute="top" constant="100" id="gaf-BF-WcV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="humanDetailsLabel" destination="RB6-Tg-ypw" id="O1T-dw-l1o"/>
+                        <outlet property="imageView" destination="4ef-yp-tVP" id="Ibp-ee-Nfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPD-r9-Enf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514.49275362318849" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
